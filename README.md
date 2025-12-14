@@ -1,12 +1,7 @@
 # 酒精與可燃氣體偵測之智慧通風與除味系統
 
-This project implements an **Edge IoT-based gas detection and ventilation control system**
-using Raspberry Pi and multiple MQ gas sensors.
+作者:113453006 陳坤輝
 
-The system performs **on-device sensing, rule-based state classification, and automatic actuation**
-without relying on cloud services.
-
----
 
 ## 🔧 System Overview
 
