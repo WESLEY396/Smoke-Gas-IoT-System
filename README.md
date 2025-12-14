@@ -10,7 +10,7 @@
 
 
 ##  裝置照片
-![Hardware Setup](images/Decice 1.jpg)
+![Hardware Setup](image/Decice 1.jpg)
 
 
 
