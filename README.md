@@ -4,7 +4,9 @@
 
 ---
 
-## 🔧 System Overview
+## 🔧 專案簡介
+
+本系統使用樹莓派搭配多組 MQ 氣體感測器（MQ-2、MQ-9、MQ-135）與 ADS1115 類比轉數位模組，即時量測環境中氣體濃度變化。系統透過多感測器資料融合與邊緣運算邏輯，將環境狀態分類為 Ambient、Alcohol-like 與 Gas-like，並依據狀態自動控制排風扇與除味霧化裝置，以降低異常氣體累積風險並改善室內空氣品質。
 
 - Platform: Raspberry Pi 4
 - Sensors:
