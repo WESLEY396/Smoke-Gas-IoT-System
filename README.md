@@ -14,6 +14,61 @@
 ![Hardware Setup](images/device1.JPG)
 
 
+##  程式碼功能說明
+## 🧩 Code Function Overview
+
+本系統以 Python 撰寫，運行於 Raspberry Pi，核心功能為在邊緣端即時讀取多顆氣體感測器資料，進行狀態判斷，並自動控制通風與除味裝置。整體程式架構採用模組化設計，主要功能如下：
+
+### 1️⃣ Sensor Data Acquisition
+- 透過 I²C 介面讀取 ADS1115（16-bit ADC）數值
+- 支援多通道類比輸入，分別對應 MQ-2、MQ-9、MQ-135 氣體感測器
+- 將原始 ADC 數值轉換為實際電壓值，作為後續分析依據
+
+### 2️⃣ Signal Pre-processing
+- 對感測數據進行濾波處理（Median Filter + Exponential Moving Average）
+- 降低瞬間雜訊與環境干擾對判斷結果的影響
+- 提升整體系統穩定性與判斷一致性
+
+### 3️⃣ Rule-based State Classification
+- 採用規則式（Rule-based）邊緣判斷邏輯，非依賴雲端或 AI 模型
+- 根據多感測器特徵組合，將環境狀態分類為：
+  - **Ambient**：正常環境狀態
+  - **Alcohol-like**：酒精 / VOC 類氣體特徵
+  - **Gas-like**：可燃氣體相關特徵
+- 透過多條門檻線與感測器交叉判斷，避免單一感測器誤判
+
+### 4️⃣ Debounce & Hysteresis Mechanism
+- 使用時間視窗（Debounce Window）累積多次判斷結果
+- 僅在狀態穩定達到指定次數後才切換系統狀態
+- 加入 Hysteresis 設計，避免狀態在臨界值附近頻繁切換
+
+### 5️⃣ Event-driven Actuator Control
+- 依最終判斷狀態自動控制 GPIO 輸出
+- **排風扇（Fan）**
+  - 在 Alcohol-like 或 Gas-like 狀態時立即啟動
+  - 環境回復正常且低於指定門檻後才關閉
+- **霧化裝置（Mist）**
+  - 僅在氣體事件結束後才啟動
+  - 支援延遲啟動與單次噴霧機制，避免過度除味
+
+### 6️⃣ Status Indication
+- 透過 LED 指示目前系統狀態：
+  - 綠燈：Ambient
+  - 黃燈：Alcohol-like
+  - 紅燈：Gas-like
+- 提供即時、直覺的視覺回饋
+
+### 7️⃣ Data Logging
+- 將每次感測數據、濾波後數值、狀態判斷結果與控制輸出
+  以時間序列方式記錄至本地 CSV 檔案
+- 方便後續參數調整、系統驗證與分析使用
+
+### 8️⃣ Edge IoT Design Characteristics
+- 系統所有判斷與控制皆於 Raspberry Pi 本地端即時完成
+- 不依賴雲端服務即可獨立運作
+- 網路僅作為未來擴充（如資料上傳或遠端監控）用途
+
+
 
 
 
