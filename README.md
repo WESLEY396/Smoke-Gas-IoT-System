@@ -10,7 +10,7 @@
 
 
 ##  裝置照片
-![Hardware Setup](image/Device 1.jpg)
+![Hardware Setup](image/Device 1.JPG)
 
 
 
