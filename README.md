@@ -13,7 +13,8 @@
 ![Hardware Setup](images/device2.JPG)
 ![Hardware Setup](images/device1.JPG)
 
-##系統架構圖
+## 系統架構圖
+
 <img width="675" height="566" alt="image" src="https://github.com/user-attachments/assets/f1b5afaa-0df3-4e81-b557-c1ea532d9c5b" />
 
 
