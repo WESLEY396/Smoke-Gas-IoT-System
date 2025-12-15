@@ -78,14 +78,24 @@
 
   ---
 
-  ##  零件規格
-  <img width="692" height="334" alt="image" src="https://github.com/user-attachments/assets/1bcc1bee-b90a-4f5d-916d-0a0f04894316" />
+##  零件規格
+<img width="559" height="272" alt="image" src="https://github.com/user-attachments/assets/1865aeca-0d91-4e46-8983-f967a2c7595d" />
 
-  <img width="692" height="392" alt="image" src="https://github.com/user-attachments/assets/4878fb1a-c0af-4777-af49-196c6ce0f5a6" />
+<img width="559" height="319" alt="image" src="https://github.com/user-attachments/assets/8393035c-3ffc-4997-a209-9c15a21c6492" />
 
-  <img width="691" height="453" alt="image" src="https://github.com/user-attachments/assets/11e20554-7b74-4692-a8ff-7187d4557c15" />
+<img width="567" height="368" alt="image" src="https://github.com/user-attachments/assets/72023da2-944d-4f4d-8a29-8e9f67046cd1" />
 
-  <img width="692" height="449" alt="image" src="https://github.com/user-attachments/assets/6cf82f73-0cdd-4022-baf1-02db9faed94d" />
+<img width="562" height="369" alt="image" src="https://github.com/user-attachments/assets/75a9fa35-60f0-48af-9fc0-158859908686" />
+
+<img width="280" height="326" alt="image" src="https://github.com/user-attachments/assets/bcb1b1e5-4f26-4f19-96e8-2e428a3b3cd0" />
+
+
+
+
+
+
+
+
 
 
 ##  對應Pin與外接電源電流分配
