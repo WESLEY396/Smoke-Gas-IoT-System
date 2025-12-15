@@ -23,6 +23,7 @@
 - 透過 I²C 介面讀取 ADS1115（16-bit ADC）數值
 - 支援多通道類比輸入，分別對應 MQ-2、MQ-9、MQ-135 氣體感測器
 - 將原始 ADC 數值轉換為實際電壓值，作為後續分析依據
+<img width="846" height="603" alt="image" src="https://github.com/user-attachments/assets/76bac434-a21d-4508-b003-475c13661897" />
 
 ### 2️⃣ Signal Pre-processing
 - 對感測數據進行濾波處理（Median Filter + Exponential Moving Average）
@@ -67,6 +68,9 @@
 - 系統所有判斷與控制皆於 Raspberry Pi 本地端即時完成
 - 不依賴雲端服務即可獨立運作
 - 網路僅作為未來擴充（如資料上傳或遠端監控）用途
+
+  ---
+
 
 
 
