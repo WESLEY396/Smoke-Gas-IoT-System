@@ -78,6 +78,19 @@
 
   ---
 
+  ##  零件規格
+  <img width="692" height="334" alt="image" src="https://github.com/user-attachments/assets/1bcc1bee-b90a-4f5d-916d-0a0f04894316" />
+
+  <img width="692" height="392" alt="image" src="https://github.com/user-attachments/assets/4878fb1a-c0af-4777-af49-196c6ce0f5a6" />
+
+  <img width="691" height="453" alt="image" src="https://github.com/user-attachments/assets/11e20554-7b74-4692-a8ff-7187d4557c15" />
+
+  <img width="692" height="449" alt="image" src="https://github.com/user-attachments/assets/6cf82f73-0cdd-4022-baf1-02db9faed94d" />
+
+
+
+
+
 
 
 
