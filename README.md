@@ -29,6 +29,7 @@
 - 對感測數據進行濾波處理（Median Filter + Exponential Moving Average）
 - 降低瞬間雜訊與環境干擾對判斷結果的影響
 - 提升整體系統穩定性與判斷一致性
+<img width="755" height="510" alt="image" src="https://github.com/user-attachments/assets/ede4590a-6848-4f1a-a18a-7fdd01ae9a10" />
 
 ### 3️⃣ Rule-based State Classification
 - 採用規則式（Rule-based）邊緣判斷邏輯，非依賴雲端或 AI 模型
@@ -37,11 +38,13 @@
   - **Alcohol-like**：酒精 / VOC 類氣體特徵
   - **Gas-like**：可燃氣體相關特徵
 - 透過多條門檻線與感測器交叉判斷，避免單一感測器誤判
+<img width="719" height="675" alt="image" src="https://github.com/user-attachments/assets/8d5d09f4-6df8-483e-960f-cb084370ed0c" />
 
 ### 4️⃣ Debounce & Hysteresis Mechanism
 - 使用時間視窗（Debounce Window）累積多次判斷結果
 - 僅在狀態穩定達到指定次數後才切換系統狀態
 - 加入 Hysteresis 設計，避免狀態在臨界值附近頻繁切換
+<img width="670" height="638" alt="image" src="https://github.com/user-attachments/assets/b190bc2d-bc65-46d2-8bcb-84d8e153ce36" />
 
 ### 5️⃣ Event-driven Actuator Control
 - 依最終判斷狀態自動控制 GPIO 輸出
@@ -51,19 +54,20 @@
 - **霧化裝置（Mist）**
   - 僅在氣體事件結束後才啟動
   - 支援延遲啟動與單次噴霧機制，避免過度除味
-
+<img width="702" height="317" alt="image" src="https://github.com/user-attachments/assets/29d93a32-3bec-4105-9ab2-30b279af85a6" />
+<img width="614" height="554" alt="image" src="https://github.com/user-attachments/assets/c5500892-efee-4316-ac15-d1a9cc1a886c" />
 ### 6️⃣ Status Indication
 - 透過 LED 指示目前系統狀態：
   - 綠燈：Ambient
   - 黃燈：Alcohol-like
   - 紅燈：Gas-like
 - 提供即時、直覺的視覺回饋
-
+<img width="532" height="184" alt="image" src="https://github.com/user-attachments/assets/c81a430e-99eb-4886-b863-023ce73cb4e7" />
 ### 7️⃣ Data Logging
 - 將每次感測數據、濾波後數值、狀態判斷結果與控制輸出
   以時間序列方式記錄至本地 CSV 檔案
 - 方便後續參數調整、系統驗證與分析使用
-
+<img width="690" height="480" alt="image" src="https://github.com/user-attachments/assets/525d301e-5b00-4042-a69f-638f8bc769a4" />
 ### 8️⃣ Edge IoT Design Characteristics
 - 系統所有判斷與控制皆於 Raspberry Pi 本地端即時完成
 - 不依賴雲端服務即可獨立運作
