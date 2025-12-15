@@ -133,12 +133,6 @@
 
 ---
 
-## 🏗️ System Architecture
-
-![Architecture](docs/architecture.png)
-
----
-
 ## 影片Demo
 https://www.youtube.com/watch?v=8FOCQ25Tr0I
 
