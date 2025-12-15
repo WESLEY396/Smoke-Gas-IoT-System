@@ -136,7 +136,8 @@
 
 ## 影片Demo
 https://www.youtube.com/watch?v=8FOCQ25Tr0I
-動作說明:
+
+## 動作說明:
 1.先送外接電源驅動繼電器
 2.打開程式碼
 3.當環境空氣正常時，側板LED顯示為綠燈。
