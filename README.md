@@ -56,6 +56,7 @@
   - 支援延遲啟動與單次噴霧機制，避免過度除味
 <img width="702" height="317" alt="image" src="https://github.com/user-attachments/assets/29d93a32-3bec-4105-9ab2-30b279af85a6" />
 <img width="614" height="554" alt="image" src="https://github.com/user-attachments/assets/c5500892-efee-4316-ac15-d1a9cc1a886c" />
+
 ### 6️⃣ Status Indication
 - 透過 LED 指示目前系統狀態：
   - 綠燈：Ambient
@@ -63,6 +64,7 @@
   - 紅燈：Gas-like
 - 提供即時、直覺的視覺回饋
 <img width="532" height="184" alt="image" src="https://github.com/user-attachments/assets/c81a430e-99eb-4886-b863-023ce73cb4e7" />
+
 ### 7️⃣ Data Logging
 - 將每次感測數據、濾波後數值、狀態判斷結果與控制輸出
   以時間序列方式記錄至本地 CSV 檔案
