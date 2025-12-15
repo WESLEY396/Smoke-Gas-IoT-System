@@ -68,6 +68,7 @@
   以時間序列方式記錄至本地 CSV 檔案
 - 方便後續參數調整、系統驗證與分析使用
 <img width="690" height="480" alt="image" src="https://github.com/user-attachments/assets/525d301e-5b00-4042-a69f-638f8bc769a4" />
+
 ### 8️⃣ Edge IoT Design Characteristics
 - 系統所有判斷與控制皆於 Raspberry Pi 本地端即時完成
 - 不依賴雲端服務即可獨立運作
