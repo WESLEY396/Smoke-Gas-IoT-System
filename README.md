@@ -88,6 +88,13 @@
   <img width="692" height="449" alt="image" src="https://github.com/user-attachments/assets/6cf82f73-0cdd-4022-baf1-02db9faed94d" />
 
 
+##  對應Pin與外接電源電流分配
+<img width="552" height="694" alt="image" src="https://github.com/user-attachments/assets/595762b6-dd02-4944-bcc1-189ec53d997d" />
+
+##  接腳對應
+
+<img width="588" height="570" alt="image" src="https://github.com/user-attachments/assets/a7d14552-8630-4524-80ae-a48ed368e4f8" />
+
 
 
 
