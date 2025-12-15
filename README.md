@@ -97,7 +97,6 @@
 
 <img width="588" height="570" alt="image" src="https://github.com/user-attachments/assets/a7d14552-8630-4524-80ae-a48ed368e4f8" />
 
- Local CSV logging (time-series data)
 
 ---
 
