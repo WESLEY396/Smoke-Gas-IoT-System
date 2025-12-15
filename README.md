@@ -78,7 +78,7 @@
 
   ---
 
-##  零件規格
+##  硬體零件需求與規格
 <img width="559" height="272" alt="image" src="https://github.com/user-attachments/assets/1865aeca-0d91-4e46-8983-f967a2c7595d" />
 
 <img width="559" height="319" alt="image" src="https://github.com/user-attachments/assets/8393035c-3ffc-4997-a209-9c15a21c6492" />
@@ -98,6 +98,39 @@
 <img width="588" height="570" alt="image" src="https://github.com/user-attachments/assets/a7d14552-8630-4524-80ae-a48ed368e4f8" />
 
  Local CSV logging (time-series data)
+
+---
+
+## 軟體需求
+
+1. 作業系統需求（Operating System）
+- **Raspberry Pi OS**（基於 Debian 的 Linux 作業系統）
+- 必須支援 **I²C** 與 **GPIO** 介面
+- 建議版本：Raspberry Pi OS（Bullseye 或更新版本）
+
+---
+
+2. 程式語言與執行環境
+- **Python 3.x**（建議版本 ≥ 3.7）
+- 系統以單一主程式 `main.py` 執行
+- 不需額外 Web Framework 或雲端服務即可運作
+
+---
+
+3. 必要 Python 套件（Libraries）
+
+感測器與硬體控制
+- `smbus` / `smbus2`  
+  - 透過 I²C 與 ADS1115（16-bit ADC）進行通訊
+- `RPi.GPIO`  
+  - 控制 GPIO 腳位，用於 LED、風扇繼電器與霧化器繼電器
+
+系統與資料處理
+- `time`：取樣間隔、延遲與事件計時  
+- `datetime`：產生時間戳記  
+- `csv`：將感測與狀態資料記錄為 CSV 檔案  
+- `os`：檔案與資料夾管理  
+- `collections.deque`：實作滑動視窗，用於濾波與 debounce 判斷  
 
 ---
 
