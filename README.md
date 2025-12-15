@@ -90,15 +90,6 @@
 <img width="559" height="241" alt="image" src="https://github.com/user-attachments/assets/0283add9-e617-4d9a-af09-cc79aeb7d73a" />
 
 
-
-
-
-
-
-
-
-
-
 ##  對應Pin與外接電源電流分配
 <img width="552" height="694" alt="image" src="https://github.com/user-attachments/assets/595762b6-dd02-4944-bcc1-189ec53d997d" />
 
@@ -106,36 +97,7 @@
 
 <img width="588" height="570" alt="image" src="https://github.com/user-attachments/assets/a7d14552-8630-4524-80ae-a48ed368e4f8" />
 
-
-
-
-
-
-
-
-
-- Platform: Raspberry Pi 4
-- Sensors:
-  - MQ-2 (Combustible gas / smoke-like response)
-  - MQ-9 (Alcohol / CO sensitive)
-  - MQ-135 (VOC / air quality variation)
-- ADC: ADS1115 (16-bit)
-- Actuators:
-  - DC Fan (ventilation)
-  - Ultrasonic mist module (odor removal)
-
----
-
-## 🧠 Core Features
-
-- Multi-sensor gas feature fusion
-- Rule-based edge classification:
-  - Ambient
-  - Alcohol-like
-  - Gas-like
-- Debounce & hysteresis for stable state transition
-- Event-driven fan and mist control
-- Local CSV logging (time-series data)
+ Local CSV logging (time-series data)
 
 ---
 
