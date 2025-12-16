@@ -17,6 +17,9 @@
 
 <img width="675" height="566" alt="image" src="https://github.com/user-attachments/assets/f1b5afaa-0df3-4e81-b557-c1ea532d9c5b" />
 
+## 接線圖
+<img width="1536" height="1024" alt="接線圖" src="https://github.com/user-attachments/assets/e9998111-5219-4ead-804e-afd26b32e0c1" />
+
 
 
 ##  程式碼功能說明
