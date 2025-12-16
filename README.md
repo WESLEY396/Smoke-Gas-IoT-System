@@ -8,6 +8,8 @@
 
 本系統使用樹莓派搭配多組 MQ 氣體感測器（MQ-2、MQ-9、MQ-135）與 ADS1115 類比轉數位模組，即時量測環境中氣體濃度變化。系統透過多感測器資料融合與邊緣運算邏輯，將環境狀態分類為 Ambient、Alcohol-like 與 Gas-like，並依據狀態自動控制排風扇與除味霧化裝置，以降低異常氣體累積風險並改善室內空氣品質。
 
+## 影片Demo
+https://www.youtube.com/watch?v=8FOCQ25Tr0I
 
 ##  裝置照片
 ![Hardware Setup](images/device2.JPG)
@@ -141,8 +143,7 @@
 
 ---
 
-## 影片Demo
-https://www.youtube.com/watch?v=8FOCQ25Tr0I
+
 
 ## 動作說明:
 1.先送外接電源驅動繼電器
