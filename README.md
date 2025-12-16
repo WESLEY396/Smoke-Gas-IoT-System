@@ -28,19 +28,19 @@ https://www.youtube.com/watch?v=8FOCQ25Tr0I
 
 本系統以 Python 撰寫，運行於 Raspberry Pi，核心功能為在邊緣端即時讀取多顆氣體感測器資料，進行狀態判斷，並自動控制通風與除味裝置。整體程式架構採用模組化設計，主要功能如下：
 
-### 1️⃣ Sensor Data Acquisition
+### 1. Sensor Data Acquisition
 - 透過 I²C 介面讀取 ADS1115（16-bit ADC）數值
 - 支援多通道類比輸入，分別對應 MQ-2、MQ-9、MQ-135 氣體感測器
 - 將原始 ADC 數值轉換為實際電壓值，作為後續分析依據
 <img width="846" height="603" alt="image" src="https://github.com/user-attachments/assets/76bac434-a21d-4508-b003-475c13661897" />
 
-### 2️⃣ Signal Pre-processing
+### 2. Signal Pre-processing
 - 對感測數據進行濾波處理（Median Filter + Exponential Moving Average）
 - 降低瞬間雜訊與環境干擾對判斷結果的影響
 - 提升整體系統穩定性與判斷一致性
 <img width="755" height="510" alt="image" src="https://github.com/user-attachments/assets/ede4590a-6848-4f1a-a18a-7fdd01ae9a10" />
 
-### 3️⃣ Rule-based State Classification
+### 3. Rule-based State Classification
 - 採用規則式（Rule-based）邊緣判斷邏輯，非依賴雲端或 AI 模型
 - 根據多感測器特徵組合，將環境狀態分類為：
   - **Ambient**：正常環境狀態
@@ -49,13 +49,13 @@ https://www.youtube.com/watch?v=8FOCQ25Tr0I
 - 透過多條門檻線與感測器交叉判斷，避免單一感測器誤判
 <img width="719" height="675" alt="image" src="https://github.com/user-attachments/assets/8d5d09f4-6df8-483e-960f-cb084370ed0c" />
 
-### 4️⃣ Debounce & Hysteresis Mechanism
+### 4. Debounce & Hysteresis Mechanism
 - 使用時間視窗（Debounce Window）累積多次判斷結果
 - 僅在狀態穩定達到指定次數後才切換系統狀態
 - 加入 Hysteresis 設計，避免狀態在臨界值附近頻繁切換
 <img width="670" height="638" alt="image" src="https://github.com/user-attachments/assets/b190bc2d-bc65-46d2-8bcb-84d8e153ce36" />
 
-### 5️⃣ Event-driven Actuator Control
+### 5. Event-driven Actuator Control
 - 依最終判斷狀態自動控制 GPIO 輸出
 - **排風扇（Fan）**
   - 在 Alcohol-like 或 Gas-like 狀態時立即啟動
@@ -66,7 +66,7 @@ https://www.youtube.com/watch?v=8FOCQ25Tr0I
 <img width="702" height="317" alt="image" src="https://github.com/user-attachments/assets/29d93a32-3bec-4105-9ab2-30b279af85a6" />
 <img width="614" height="554" alt="image" src="https://github.com/user-attachments/assets/c5500892-efee-4316-ac15-d1a9cc1a886c" />
 
-### 6️⃣ Status Indication
+### 6. Status Indication
 - 透過 LED 指示目前系統狀態：
   - 綠燈：Ambient
   - 黃燈：Alcohol-like
@@ -74,20 +74,20 @@ https://www.youtube.com/watch?v=8FOCQ25Tr0I
 - 提供即時、直覺的視覺回饋
 <img width="532" height="184" alt="image" src="https://github.com/user-attachments/assets/c81a430e-99eb-4886-b863-023ce73cb4e7" />
 
-### 7️⃣ Data Logging
+### 7. Data Logging
 - 將每次感測數據、濾波後數值、狀態判斷結果與控制輸出
   以時間序列方式記錄至本地 CSV 檔案
 - 方便後續參數調整、系統驗證與分析使用
 <img width="690" height="480" alt="image" src="https://github.com/user-attachments/assets/525d301e-5b00-4042-a69f-638f8bc769a4" />
 
-### 8️⃣ Edge IoT Design Characteristics
+### 8. Edge IoT Design Characteristics
 - 系統所有判斷與控制皆於 Raspberry Pi 本地端即時完成
 - 不依賴雲端服務即可獨立運作
 - 網路僅作為未來擴充（如資料上傳或遠端監控）用途
 
   ---
 
-##  硬體零件需求與規格
+## (7) 硬體零件需求與規格
 <img width="559" height="272" alt="image" src="https://github.com/user-attachments/assets/1865aeca-0d91-4e46-8983-f967a2c7595d" />
 
 <img width="559" height="319" alt="image" src="https://github.com/user-attachments/assets/8393035c-3ffc-4997-a209-9c15a21c6492" />
@@ -99,17 +99,17 @@ https://www.youtube.com/watch?v=8FOCQ25Tr0I
 <img width="559" height="241" alt="image" src="https://github.com/user-attachments/assets/0283add9-e617-4d9a-af09-cc79aeb7d73a" />
 
 
-##  對應Pin與外接電源電流分配
+## (8) 對應Pin與外接電源電流分配
 <img width="552" height="694" alt="image" src="https://github.com/user-attachments/assets/595762b6-dd02-4944-bcc1-189ec53d997d" />
 
-##  接腳對應
+## (9) 接腳對應
 
 <img width="588" height="570" alt="image" src="https://github.com/user-attachments/assets/a7d14552-8630-4524-80ae-a48ed368e4f8" />
 
 
 ---
 
-## 軟體需求
+## (10) 軟體需求
 
 1. 作業系統需求（Operating System）
 - **Raspberry Pi OS**（基於 Debian 的 Linux 作業系統）
@@ -144,7 +144,7 @@ https://www.youtube.com/watch?v=8FOCQ25Tr0I
 
 
 
-## 動作說明:
+## (11) 動作說明:
 1.先送外接電源驅動繼電器
 2.打開程式碼
 3.當環境空氣正常時，側板LED顯示為綠燈。
