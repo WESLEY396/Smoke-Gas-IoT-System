@@ -11,21 +11,20 @@
 ## (2) 影片
 https://www.youtube.com/watch?v=8FOCQ25Tr0I
 
-##  裝置照片
+## (3) 裝置照片
 ![Hardware Setup](images/device2.JPG)
 ![Hardware Setup](images/device1.JPG)
 
-## 系統架構圖
+## (4) 系統架構圖
 
 <img width="675" height="566" alt="image" src="https://github.com/user-attachments/assets/f1b5afaa-0df3-4e81-b557-c1ea532d9c5b" />
 
-## 接線圖
+## (5) 接線圖
 <img width="1536" height="1024" alt="接線圖" src="https://github.com/user-attachments/assets/e9998111-5219-4ead-804e-afd26b32e0c1" />
 
 
 
-##  程式碼功能說明
-## 🧩 Code Function Overview
+## (6) 程式碼功能說明
 
 本系統以 Python 撰寫，運行於 Raspberry Pi，核心功能為在邊緣端即時讀取多顆氣體感測器資料，進行狀態判斷，並自動控制通風與除味裝置。整體程式架構採用模組化設計，主要功能如下：
 
